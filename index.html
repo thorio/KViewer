@@ -360,8 +360,9 @@
 
           evt.preventDefault();
           if (isJSONvalid(evtText)) {
+            epClearEpisodes(false);
             setCookie('Eps', evtText);
-            epClearEpisodes();
+            rebuildPage();
           }
         });
       }
